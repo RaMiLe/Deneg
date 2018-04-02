@@ -42,7 +42,7 @@ to register.</p>
 </form>
 
 <?php
-$dsn = "sqlsrv:server = tcp:asus19.database.windows.net,1433; Database = deneg";
+$dsn = "sqlsrv:server = tcp:asus19.database.windows.net,1433; Database = denegi";
 $username = "ram";
 $password = "Rosbank20";
 try {
