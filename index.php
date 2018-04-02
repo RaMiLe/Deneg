@@ -28,7 +28,7 @@ email address, then click <strong>Submit</strong>
 to register.</p>
 <form method="post" action="index.php" enctype="multipart/form-data" >
 <input type ="text" name ="name" id ="name" placeholder ="Введите ваше имя">
-<input type ="text" name ="email" id ="email" placeholder ="Ваша Фамилия..">
+<input type ="text" name ="email" id ="email" placeholder ="Ваш еmail..">
 <select name="country">
 <option value="">All</option>
 <option value="Russia">Russia</option>
@@ -42,7 +42,7 @@ to register.</p>
 </form>
 
 <?php
-$dsn = "sqlsrv:server = tcp:asus19.database.windows.net,1433; Database = dengi";
+dsn = "sqlsrv:server = tcp:asus19.database.windows.net,1433; Database = dengi";
 $username = "ram";
 $password = "Rosbank20";
 try {
@@ -53,23 +53,26 @@ catch (PDOException $e) {
 print("Ошибка подключения к SQL Server.");
 die(print_r($e));
 }
+
 if(!empty($_POST)) {
 try {
 $name = $_POST['name'];
-$famil = $_POST['email'];
+$email = $_POST['email'];
 $date = date("Y-m-d");
 $country = $_POST['country'];
+
 if ($name == "" || $email == "") {
 echo "<h3>Не заполнены поля name и email.</h3>";
 }
 else {
-$sql_insert ="INSERT INTO registration_on (name,email, date, country) VALUES (?,?,?,?)";
+$sql_insert ="INSERT INTO registration_on (name, email, date, country) VALUES (?,?,?,?)";
 $stmt = $conn->prepare($sql_insert);
 $stmt->bindValue(1, $name);
-$stmt->bindValue(2, $famil);
+$stmt->bindValue(2, $email);
 $stmt->bindValue(3, $date);
 $stmt->bindValue(4, $country);
 $stmt->execute();
+
 echo "<h3>Вы зарегистрировались!</h3>";
 }
 }
@@ -77,6 +80,7 @@ catch(Exception $e) {
 die(var_dump($e));
 }
 }
+
 $sql_select = "SELECT * FROM registration_on";
 $stmt = $conn->query($sql_select);
 $stmt->execute();
@@ -91,7 +95,7 @@ if(count($registrants) > 0) {
 echo "<h2>Люди, которые зарегистрированы:</h2>";
 echo "<table>";
 echo "<tr><th>Name</th>";
-echo "<th>famil</th>";
+echo "<th>Email</th>";
 echo "<th>Country</th>";
 echo "<th>Date</th></tr>";
 foreach($registrants as $registrant) {
@@ -105,4 +109,6 @@ echo "</table>";
 else {
 echo "<h3>В настоящее время никто не зарегистрирован.</h3>";
 }
+
 ?>
+
