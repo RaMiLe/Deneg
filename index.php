@@ -1,6 +1,6 @@
 <html>
 <head>
-<Title>Registration Form</Title>
+<Title>Перевод денежных средств</Title>
 <style type="text/css">
 body { background-color:
 #fff; border-top: solid 10px #000;
@@ -22,7 +22,7 @@ border: 0 none; }
 </style>
 </head>
 <body>
-<h1>Register here!</h1>
+<h1>Перевод денежных средств</h1>
 <p>Fill in your name and
 email address, then click <strong>Submit</strong>
 to register.</p>
@@ -88,7 +88,7 @@ $stmt->execute(array(':country'=>$country.'%'));
 }
 $registrants = $stmt->fetchAll();
 if(count($registrants) > 0) {
-echo "<h2>Люди, которые зарегистрированы:</h2>";
+echo "<h2>Люди, которые оставили заявки на перевод денег.:</h2>";
 echo "<table>";
 echo "<tr><th>Name</th>";
 echo "<th>famil</th>";
@@ -103,7 +103,7 @@ echo "<td>".$registrant['date']."</td></tr>";
 echo "</table>";
 }
 else {
-echo "<h3>В настоящее время никто не зарегистрирован.</h3>";
+echo "<h3>В настоящее время никто не оставил заявку.</h3>";
 }
 ?>
 
