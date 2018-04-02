@@ -28,7 +28,7 @@ email address, then click <strong>Submit</strong>
 to register.</p>
 <form method="post" action="index.php" enctype="multipart/form-data" >
 <input type ="text" name ="name" id ="name" placeholder ="Введите ваше имя">
-<input type ="text" name ="email" id ="email" placeholder ="Ваш еmail..">
+<input type ="text" name ="email" id ="email" placeholder ="Ваша фамилия..">
 <select name="country">
 <option value="">All</option>
 <option value="Russia">Russia</option>
@@ -60,7 +60,7 @@ $email = $_POST['email'];
 $date = date("Y-m-d");
 $country = $_POST['country'];
 if ($name == "" || $email == "") {
-echo "<h3>Не заполнены поля name и email.</h3>";
+echo "<h3>Не заполнены поля name и famil.</h3>";
 }
 else {
 $sql_insert ="INSERT INTO registration_on (name, email, date, country) VALUES (?,?,?,?)";
@@ -91,7 +91,7 @@ if(count($registrants) > 0) {
 echo "<h2>Люди, которые зарегистрированы:</h2>";
 echo "<table>";
 echo "<tr><th>Name</th>";
-echo "<th>Email</th>";
+echo "<th>famil</th>";
 echo "<th>Country</th>";
 echo "<th>Date</th></tr>";
 foreach($registrants as $registrant) {
