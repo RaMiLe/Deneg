@@ -60,10 +60,10 @@ $famil = $_POST['famil'];
 $date = date("Y-m-d");
 $country = $_POST['country'];
 if ($name == "" || $email == "") {
-echo "<h3>Не заполнены поля name и famil.</h3>";
+echo "<h3>Не заполнены поля name и email.</h3>";
 }
 else {
-$sql_insert ="INSERT INTO registration_on (name, famil, date, country) VALUES (?,?,?,?)";
+$sql_insert ="INSERT INTO registration_on (name,famil, date, country) VALUES (?,?,?,?)";
 $stmt = $conn->prepare($sql_insert);
 $stmt->bindValue(1, $name);
 $stmt->bindValue(2, $famil);
@@ -96,7 +96,7 @@ echo "<th>Country</th>";
 echo "<th>Date</th></tr>";
 foreach($registrants as $registrant) {
 echo "<td>".$registrant['name']."</td>";
-echo "<td>".$registrant['famill']."</td>";
+echo "<td>".$registrant['famil']."</td>";
 echo "<td>".$registrant['country']."</td>";
 echo "<td>".$registrant['date']."</td></tr>";
 }
