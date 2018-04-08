@@ -10,7 +10,6 @@ name VARCHAR(30),
 email VARCHAR(30), 
 country VARCHAR(30), 
 famil VARCHAR(30), 
-balans VARCHAR(30), 
 date DATE)"; 
 $conn->query($sql); 
 
