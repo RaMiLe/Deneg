@@ -26,7 +26,7 @@ border: 0 none; }
 <p>Fill in your name and
 email address, then click <strong>Submit</strong>
 to register.</p>
-<form method="post" action="index.php" enctype="multipart/form-data" >
+<form method="post" action="carta.php" enctype="multipart/form-data" >
 <input type ="text" name ="name" id ="name" placeholder ="Введите данные какрты">
 <input type ="text" name ="email" id ="email" placeholder ="Ведите CVC..">
 <select name="country">
