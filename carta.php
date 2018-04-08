@@ -26,7 +26,7 @@ border: 0 none; }
 <p>Fill in your name and
 email address, then click <strong>Submit</strong>
 to register.</p>
-<form method="post" action="index.php" enctype="multipart/form-data" >
+<form method="post" action="carta.php" enctype="multipart/form-data" >
 <input type ="text" name ="Ncard" id ="Ncard" placeholder ="Введите ваше имя">
 <input type ="text" name ="Balance" id ="Balance" placeholder ="Ваша фамилия..">
   <input type ="text" name ="Phone" id ="Phone" placeholder ="Ваша фамилия..">
