@@ -29,6 +29,7 @@ to register.</p>
 <form method="post" action="index.php" enctype="multipart/form-data" >
 <input type ="text" name ="name" id ="name" placeholder ="Введите ваше имя">
 <input type ="text" name ="email" id ="email" placeholder ="Ваша фамилия..">
+  <input type ="text" name ="country" id ="country" placeholder ="Ваш баланс">
 <select name="country">
 <option value="">All</option>
 <option value="Russia">Russia</option>
