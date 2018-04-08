@@ -29,8 +29,7 @@ to register.</p>
 <form method="post" action="index.php" enctype="multipart/form-data" >
 <input type ="text" name ="name" id ="name" placeholder ="Введите ваше имя">
 <input type ="text" name ="email" id ="email" placeholder ="Ваша фамилия..">
-  <input type ="text" name ="balans" id ="balans" placeholder ="Ваш баланс">
-<select name="country">
+  <select name="country">
 <option value="">All</option>
 <option value="Russia">Russia</option>
 <option value="USA">USA</option>
@@ -64,13 +63,12 @@ if ($name == "" || $email == "") {
 echo "<h3>Не заполнены поля name и famil.</h3>";
 }
 else {
-$sql_insert ="INSERT INTO registration_on (name, email, date, country, balans) VALUES (?,?,?,?,?)";
+$sql_insert ="INSERT INTO registration_on (name, email, date, country) VALUES (?,?,?,?)";
 $stmt = $conn->prepare($sql_insert);
 $stmt->bindValue(1, $name);
 $stmt->bindValue(2, $email);
 $stmt->bindValue(3, $date);
 $stmt->bindValue(4, $country);
-  $stmt->bindValue(5, $balans);
 $stmt->execute();
 echo "<h3>Вы зарегистрировались!</h3>";
 }
@@ -95,15 +93,13 @@ echo "<table>";
 echo "<tr><th>Name</th>";
 echo "<th>famil</th>";
 echo "<th>Country</th>";
-  echo "<th>balans</th>"
 echo "<th>Date</th></tr>";
 foreach($registrants as $registrant) {
 echo "<td>".$registrant['name']."</td>";
 echo "<td>".$registrant['email']."</td>";
 echo "<td>".$registrant['country']."</td>";
 echo "<td>".$registrant['date']."</td></tr>";
-  echo "<td>".$registrant['balans']."</td></tr>";
-}
+  }
 echo "</table>";
 }
 else {
