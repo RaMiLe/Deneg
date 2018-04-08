@@ -88,7 +88,7 @@ $stmt->execute(array(':country'=>$country.'%'));
 }
 $registrants = $stmt->fetchAll();
 if(count($registrants) > 0) {
-echo "<h2>Люди, которые оставили заявки на перевод денег.:</h2>";
+echo "<h2>Данные отправителя.:</h2>";
 echo "<table>";
 echo "<tr><th>Name</th>";
 echo "<th>famil</th>";
