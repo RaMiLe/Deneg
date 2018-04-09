@@ -32,6 +32,12 @@ to register.</p>
 <input type ="text" name ="country" id ="country" placeholder ="Ведите CVC..">
 <input type ="submit" name ="submit" value ="Отправить">
 <input type="submit" name="filter" value="Фильтр">
+  <script>
+function submit()
+{
+     window.location = "index.php"
+}
+</script>		
 </form>
 
 <?php
