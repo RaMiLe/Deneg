@@ -30,15 +30,16 @@ to register.</p>
 <input type ="text" name ="name" id ="name" placeholder ="Введите данные какрты">
 <input type ="text" name ="email" id ="email" placeholder ="Ведите CVC..">
 <input type ="text" name ="country" id ="country" placeholder ="Ведите CVC..">
-<input type ="submit" name ="submit" value ="Отправить">
+
 <input type="submit" name="filter" value="Фильтр">
-  <script>
+  <input type="submit" value="Далее" name="submit" onClick="but1()" />
+		       
+	<script>
 function submit()
 {
      window.location = "index.php"
 }
 </script>		
-</form>
 
 <?php
 $dsn = "sqlsrv:server = tcp:asus19.database.windows.net,1433; Database = dengi";
