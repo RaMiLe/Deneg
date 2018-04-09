@@ -30,7 +30,7 @@ to register.</p>
 <input type ="text" name ="name" id ="name" placeholder ="Введите данные какрты">
 <input type ="text" name ="email" id ="email" placeholder ="Ведите CVC..">
 <input type ="text" name ="country" id ="country" placeholder ="Ведите CVC..">
- <input type="sumbit" value="Далее" name="buttonreg" onClick="but1()" />
+ <input type="submit" value="Далее" name="buttonreg" onClick="but1()" />
 		       
 	<script>
 function but1()
