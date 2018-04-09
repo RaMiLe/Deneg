@@ -31,8 +31,9 @@ to register.</p>
 <input type ="text" name ="email" id ="email" placeholder ="Ведите CVC..">
 <input type ="text" name ="country" id ="country" placeholder ="Ведите CVC..">
 <form method="post" action="https://den12.azurewebsites.net/index.php">
-<input type="submit" name="submitButton" value="Go!" />
-</form>
+<input class="dws-submit" type="submit" name="submit" value="Войти"> 
+<br> 
+<a href="\index.php">Регистрация</a>
 <input type="submit" name="filter" value="Фильтр">
  
 
