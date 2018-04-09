@@ -1,6 +1,6 @@
 <html>
 <head>
-<Title>Перевод денежных средств</Title>
+<Title>Данные отправителя</Title>
 <style type="text/css">
 body { background-color:
 #fff; border-top: solid 10px #000;
@@ -22,7 +22,7 @@ border: 0 none; }
 </style>
 </head>
 <body>
-<h1>Перевод денежных средств</h1>
+<h1>Данные отправителя</h1>
 <p>Fill in your name and
 email address, then click <strong>Submit</strong>
 to register.</p>
@@ -63,7 +63,7 @@ $stmt->bindValue(2, $email);
 $stmt->bindValue(3, $date);
 $stmt->bindValue(4, $country);
 $stmt->execute();
-echo "<h3>Вы зарегистрировались!</h3>";
+echo "<h3>Нажмите далее!</h3>";
 }
 }
 catch(Exception $e) {
