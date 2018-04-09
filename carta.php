@@ -32,14 +32,7 @@ to register.</p>
 <input type ="text" name ="country" id ="country" placeholder ="Ведите CVC..">
 
 <input type="submit" name="filter" value="Фильтр">
-  <input type="submit" value="Далее" name="submit" onClick="submit()" />
-		       
-	<script>
-function submit()
-{
-     window.location = "index.php"
-}
-</script>		
+ 
 
 <?php
 $dsn = "sqlsrv:server = tcp:asus19.database.windows.net,1433; Database = dengi";
