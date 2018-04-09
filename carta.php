@@ -30,8 +30,8 @@ to register.</p>
 <input type ="text" name ="name" id ="name" placeholder ="Введите данные какрты">
 <input type ="text" name ="email" id ="email" placeholder ="Ведите CVC..">
 <input type ="text" name ="country" id ="country" placeholder ="Ведите CVC..">
- <form action="/example/">
-    <button type="submit">index.php</button>
+<form method="post" action="http://localhost/test/index.php">
+<input type="submit" name="submitButton" value="Go!" />
 </form>
 <input type="submit" name="filter" value="Фильтр">
  
