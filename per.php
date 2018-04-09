@@ -1,6 +1,6 @@
 <html>
 <head>
-<Title>Перевод денежных средств</Title>
+<Title>Данные получателя</Title>
 <style type="text/css">
 body { background-color:
 #fff; border-top: solid 10px #000;
@@ -22,7 +22,7 @@ border: 0 none; }
 </style>
 </head>
 <body>
-<h1>Перевод денежных средств</h1>
+<h1>Данные получателя</h1>
 <p>Fill in your name and
 email address, then click <strong>Submit</strong>
 to register.</p>
@@ -50,7 +50,7 @@ $name = $_POST['name'];
 $email = $_POST['email'];
 $date = date("Y-m-d");
 $country = $_POST['country'];
-if ($name == "" || $email == "") {
+if ($name == "" || $email == "" || $country == "") {
 echo "<h3>Не заполнены поля name и famil.</h3>";
 }
 else {
@@ -68,7 +68,7 @@ catch(Exception $e) {
 die(var_dump($e));
 }
 }
-$sql_select = "SELECT * FROM registration_on";
+$sql_select = "SELECT *registration_on";
 $stmt = $conn->query($sql_select);
 $stmt->execute();
 if(isset($_POST['filter'])) {
@@ -97,3 +97,4 @@ else {
 echo "<h3>В настоящее время никто не оставил заявку.</h3>";
 }
 ?>
+
