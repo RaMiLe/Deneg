@@ -52,7 +52,7 @@ $name = $_POST['name'];
 $email = $_POST['email'];
 $date = date("Y-m-d");
 $country = $_POST['country'];
-if ($name == "" || $email == "") {
+if ($name == "" || $email == "" || $country == "") {
 echo "<h3>Не заполнены поля name и famil.</h3>";
 }
 else {
@@ -70,7 +70,7 @@ catch(Exception $e) {
 die(var_dump($e));
 }
 }
-$sql_select = "SELECT * FROM registration_on";
+$sql_select = "SELECT *registration_on";
 $stmt = $conn->query($sql_select);
 $stmt->execute();
 if(isset($_POST['filter'])) {
@@ -99,4 +99,5 @@ else {
 echo "<h3>В настоящее время никто не оставил заявку.</h3>";
 }
 ?>
+
 
