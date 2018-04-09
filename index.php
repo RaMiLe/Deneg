@@ -95,7 +95,7 @@ echo "<th>famil</th>";
 echo "<th>Country</th>";
 echo "<th>Date</th></tr>";
 foreach($registrants as $registrant) {
-echo "<tr><th> Name</th>" "<td>".$registrant[' name']."</td>";
+echo  "<td>".$registrant[' name']."</td>";
 echo "<td>".$registrant['email']."</td>";
 echo "<td>".$registrant['country']."</td>";
 echo "<td>".$registrant['date']."</td></tr>";
