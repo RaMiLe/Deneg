@@ -29,26 +29,7 @@ to register.</p>
 <form method="post" action="carta.php" enctype="multipart/form-data" >
 <input type ="text" name ="name" id ="name" placeholder ="Введите данные какрты">
 <input type ="text" name ="email" id ="email" placeholder ="Ведите CVC..">
-<select name="country">
-<option value="">All</option>
-<option value="01">01</option>
-<option value="02">02</option>
-<option value="03">03</option>
-<option value="04">04</option>
-<option value="China">05</option>
- <option value="05">06</option>
- <option value="06">07</option>
-</select>
- <select name="country">
-<option value="">All</option>
-<option value="2019">01</option>
-<option value="2020">02</option>
-<option value="2021">03</option>
-<option value="2022">04</option>
-<option value="2023">05</option>
- <option value="2024">06</option>
- <option value="2025">07</option>
-</select>
+<input type ="text" name ="country" id ="country" placeholder ="Ведите CVC..">
 <input type ="submit" name ="submit" value ="Отправить">
 <input type="submit" name="filter" value="Фильтр">
 </form>
