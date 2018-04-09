@@ -56,7 +56,7 @@ if ($name == "" || $email == "" || $country == "") {
 echo "<h3>Не заполнены поля name и famil.</h3>";
 }
 else {
-$sql_insert ="INSERT INTO carta (name, email, date, country) VALUES (?,?,?,?)";
+$sql_insert ="INSERT INTO registration_on (name, email, date, country) VALUES (?,?,?,?)";
 $stmt = $conn->prepare($sql_insert);
 $stmt->bindValue(1, $name);
 $stmt->bindValue(2, $email);
@@ -70,7 +70,7 @@ catch(Exception $e) {
 die(var_dump($e));
 }
 }
-$sql_select = "SELECT * carta";
+$sql_select = "SELECT *registration_on";
 $stmt = $conn->query($sql_select);
 $stmt->execute();
 if(isset($_POST['filter'])) {
