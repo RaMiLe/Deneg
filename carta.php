@@ -34,6 +34,7 @@ to register.</p>
 <input class="dws-submit" type="submit" name="submit" value="Войти"> 
 <br> 
 <a href="\index.php">Регистрация</a>
+<li><a href="\content.php"> Вход</a></li> 
 <input type="submit" name="filter" value="Фильтр">
  
 
