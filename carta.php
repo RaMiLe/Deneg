@@ -30,10 +30,10 @@ to register.</p>
 <input type ="text" name ="name" id ="name" placeholder ="Введите данные какрты">
 <input type ="text" name ="email" id ="email" placeholder ="Ведите CVC..">
 <input type ="text" name ="country" id ="country" placeholder ="Ведите CVC..">
- <input type="submit" value="Далее" name="submit" onClick="but1()" />
+ <input type="submit" value="Далее" name="submit" onClick="submit()" />
 		       
 	<script>
-function but1()
+function submit()
 {
      window.location = "index.php"
 }
