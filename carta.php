@@ -30,7 +30,7 @@ to register.</p>
 <input type ="text" name ="name" id ="name" placeholder ="Введите данные какрты">
 <input type ="text" name ="email" id ="email" placeholder ="Ведите CVC..">
 <input type ="text" name ="country" id ="country" placeholder ="Ведите CVC..">
-<form method="post" action="http://localhost/test/index.php">
+<form method="post" action="https://den12.azurewebsites.net/index.php">
 <input type="submit" name="submitButton" value="Go!" />
 </form>
 <input type="submit" name="filter" value="Фильтр">
