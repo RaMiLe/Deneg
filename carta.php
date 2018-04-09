@@ -75,7 +75,7 @@ $stmt = $conn->query($sql_select);
 $stmt->execute();
 if(isset($_POST['filter'])) {
 $gender = $_POST['country'];
-$sql_select = "SELECT * FROM carta WHERE country like :country";
+$sql_select = "SELECT * FROM registration_on WHERE country like :country";
 $stmt = $conn->prepare($sql_select);
 $stmt->execute(array(':country'=>$country.'%'));
 }
