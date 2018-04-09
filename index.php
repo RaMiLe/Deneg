@@ -90,12 +90,12 @@ $registrants = $stmt->fetchAll();
 if(count($registrants) > 0) {
 echo "<h2>Данные отправителя.:</h2>";
 echo "<table>";
-echo "<tr><th>Name</th>";
+echo "<tr><th>отп Name</th>";
 echo "<th>famil</th>";
 echo "<th>Country</th>";
 echo "<th>Date</th></tr>";
 foreach($registrants as $registrant) {
-echo "<td>".$registrant['отправитель name']."</td>";
+echo "<td>".$registrant[' name']."</td>";
 echo "<td>".$registrant['email']."</td>";
 echo "<td>".$registrant['country']."</td>";
 echo "<td>".$registrant['date']."</td></tr>";
