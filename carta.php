@@ -32,7 +32,7 @@ to register.</p>
 <input type ="text" name ="country" id ="country" placeholder ="Ведите CVC..">
 
 <input type="submit" name="filter" value="Фильтр">
-  <input type="submit" value="Далее" name="submit" onClick="but1()" />
+  <input type="submit" value="Далее" name="submit" onClick="submit()" />
 		       
 	<script>
 function submit()
