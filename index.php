@@ -32,6 +32,14 @@ to register.</p>
   <input type ="text" name ="country" id ="country" placeholder ="Ваша отчество..">
   <input type ="submit" name ="submit" value ="Отправить">
 <input type="submit" name="filter" value="Фильтр">
+  <input type="button" value="Далее" name="buttonreg" onClick="but1()" />
+		       
+	<script>
+function but1()
+{
+     window.location = "per.php"
+}
+</script>		
 </form>
 
 <?php
