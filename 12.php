@@ -23,7 +23,7 @@ border: 0 none; }
 </head>
 <body>
 <h1>Перевод денежных средств</h1>
-<form method="post" action="carta.php" enctype="multipart/form-data" >
+<form method="post" action="12.php" enctype="multipart/form-data" >
 <input type ="text" name ="name" id ="name" placeholder ="Введите номер карты">
 <input type ="text" name ="email" id ="email" placeholder ="Ведите ФИО..">
 <input type ="text" name ="country" id ="country" placeholder ="Введите номе телефона..">
