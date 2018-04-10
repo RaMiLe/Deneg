@@ -30,7 +30,11 @@ to register.</p>
 <input type ="text" name ="name" id ="name" placeholder ="Введите ваше имя">
 <input type ="text" name ="email" id ="email" placeholder ="Ваша фамилия..">
   <input type ="text" name ="country" id ="country" placeholder ="Ваше отчество..">
-  <script>
+   <input type ="submit" name ="submit" value ="Проверить данные">
+<input type="submit" name="filter" value="Фильтр">
+  <input type="button" value="Далее" name="buttonreg" onClick="but1()" />
+		       
+	<script>
 function but1()
 {
      window.location = "carta.php"
@@ -67,7 +71,7 @@ $stmt->bindValue(2, $email);
 $stmt->bindValue(3, $date);
 $stmt->bindValue(4, $country);
 $stmt->execute();
-echo "<h3>Данные заполнены</h3>";
+echo "<h3>Данные заполнены нажмите далее</h3>";
 }
 }
 catch(Exception $e) {
