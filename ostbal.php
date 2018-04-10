@@ -10,6 +10,6 @@ if(isset($_POST['money']) and (integer)$_POST['money'])
   
 }
 ?>
-
+   <h3>Вы успешно перевели деньги.</h3>
 <?if($curret){?><div>Ваш остаток баланса: <?echo $curret;?></div><?}?> 
-   "<h3>Таблица создана.</h3>"
+  
