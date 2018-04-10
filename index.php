@@ -28,8 +28,7 @@ border: 0 none; }
 <input type ="text" name ="name" id ="name" placeholder ="Введите ваше имя">
 <input type ="text" name ="country" id ="country" placeholder ="Ваша отчество..">
   <input type ="submit" name ="submit" value ="Проверка данных">
-<input type="submit" name="filter" value="Фильтр">
-  <input type="button" value="Далее" name="buttonreg" onClick="but1()" />
+<input type="button" value="Далее" name="buttonreg" onClick="but1()" />
 		       
 	<script>
 function but1()
