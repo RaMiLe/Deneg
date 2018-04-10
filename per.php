@@ -30,6 +30,12 @@ to register.</p>
 <input type ="text" name ="name" id ="name" placeholder ="Введите ваше имя">
 <input type ="text" name ="email" id ="email" placeholder ="Ваша фамилия..">
   <input type ="text" name ="country" id ="country" placeholder ="Ваше отчество..">
+  <script>
+function but1()
+{
+     window.location = "carta.php"
+}
+</script>		
 
 
 <?php
@@ -51,7 +57,7 @@ $email = $_POST['email'];
 $date = date("Y-m-d");
 $country = $_POST['country'];
 if ($name == "" || $email == "" || $country == "") {
-echo "<h3>Не заполнены поля name и famil.</h3>";
+echo "<h3>Не заполнены поля имя и фамилия и отчество не заполнены.</h3>";
 }
 else {
 $sql_insert ="INSERT INTO registration_on (name, email, date, country) VALUES (?,?,?,?)";
@@ -61,7 +67,7 @@ $stmt->bindValue(2, $email);
 $stmt->bindValue(3, $date);
 $stmt->bindValue(4, $country);
 $stmt->execute();
-echo "<h3>Вы зарегистрировались!</h3>";
+echo "<h3>Данные заполнены</h3>";
 }
 }
 catch(Exception $e) {
@@ -94,7 +100,7 @@ echo "<td>".$registrant['date']."</td></tr>";
 echo "</table>";
 }
 else {
-echo "<h3>В настоящее время никто не оставил заявку.</h3>";
+echo "<h3>Данные получателя не заполнены.</h3>";
 }
 ?>
 
