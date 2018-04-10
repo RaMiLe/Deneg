@@ -9,6 +9,8 @@ if(isset($_POST['money']) and (integer)$_POST['money'])
     }
 }
 ?>
+<body>
+<h1>Сумма для перевода</h1>
 
 <form action="" method="post">
     <input type="text" name="money" /> <input type="submit" value="Перевести нажмите 2 раза" />
