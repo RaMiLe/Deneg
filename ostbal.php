@@ -12,4 +12,4 @@ if(isset($_POST['money']) and (integer)$_POST['money'])
 ?>
 
 <?if($curret){?><div>Ваш остаток баланса: <?echo $curret;?></div><?}?> 
-  echo "<h3>Таблица создана.</h3>"
+   "<h3>Таблица создана.</h3>"
