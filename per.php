@@ -23,9 +23,6 @@ border: 0 none; }
 </head>
 <body>
 <h1>Данные получателя</h1>
-<p>Fill in your name and
-email address, then click <strong>Submit</strong>
-to register.</p>
 <form method="post" action="per.php" enctype="multipart/form-data" >
 <input type ="text" name ="name" id ="name" placeholder ="Введите ваше имя">
 <input type ="text" name ="email" id ="email" placeholder ="Ваша фамилия..">
