@@ -23,14 +23,14 @@ border: 0 none; }
 </head>
 <body>
 <h1>Перевод денежных средств</h1>
-<form method="post" action="carta.php" enctype="multipart/form-data" >
+<form method="post" action="cartapol.php" enctype="multipart/form-data" >
 <input type ="text" name ="name" id ="name" placeholder ="Введите номер карты получателя">
 <input type ="submit" name ="submit" value ="Проверить данные">
 <input type="button" value="Далее" name="buttonreg" onClick="but1()" />
  <script>
 function but1()
 {
-     window.location = "cartapol.php"
+     window.location = "den.php"
 }
 </script>		
 
@@ -49,19 +49,17 @@ die(print_r($e));
 if(!empty($_POST)) {
 try {
 $name = $_POST['name'];
-$email = $_POST['email'];
+
 $date = date("Y-m-d");
-$country = $_POST['country'];
-if ($name == "" || $email == "" || $country == "") {
+
+if ($name == "" ) {
 echo "<h3>Не заполнен номер карты получателя.</h3>";
 }
 else {
-$sql_insert ="INSERT INTO registration_on (name, email, date, country) VALUES (?,?,?,?)";
+$sql_insert ="INSERT INTO registration_on (name,  date, ) VALUES (?,?)";
 $stmt = $conn->prepare($sql_insert);
 $stmt->bindValue(1, $name);
-$stmt->bindValue(2, $email);
 $stmt->bindValue(3, $date);
-$stmt->bindValue(4, $country);
 $stmt->execute();
 echo "<h3>Вы успешно заполнили</h3>";
 }
