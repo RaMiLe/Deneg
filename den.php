@@ -16,7 +16,7 @@ if(isset($_POST['money']) and (integer)$_POST['money'])
 	<script>
 function but1()
 {
-     window.location = "den.php"
+     window.location = "2.php"
 }
 </script>		
 </form>
