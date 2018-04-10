@@ -1,6 +1,6 @@
 <html>
 <head>
-<Title>Данные отправителя</Title>
+<Title>Данные карты получателя</Title>
 <style type="text/css">
 body { background-color:
 #fff; border-top: solid 10px #000;
@@ -22,19 +22,22 @@ border: 0 none; }
 </style>
 </head>
 <body>
-<form method="post" action="index.php" enctype="multipart/form-data" >
-	<input type ="text" name ="email" id ="email" placeholder ="Номер карты получателя">
- <input type ="submit" name ="submit" value ="Проверка данных">
-<input type="submit" name="filter" value="Фильтр">
-  <input type="button" value="Далее" name="buttonreg" onClick="but1()" />
+<h1>Перевод денежных средств</h1>
+<form method="post" action="carta.php" enctype="multipart/form-data" >
+<input type ="text" name ="name" id ="name" placeholder ="Введите номер карты">
+<input type ="text" name ="email" id ="email" placeholder ="Ведите ФИО..">
+<input type ="text" name ="country" id ="country" placeholder ="Введите номе телефона..">
+ <input type ="submit" name ="submit" value ="Проверить данные">
+<input type="button" value="Далее" name="buttonreg" onClick="but1()" />
 		       
 	<script>
 function but1()
 {
-     window.location = "den.php"
+     window.location = "2.php"
 }
 </script>		
-</form>
+
+ 
 
 <?php
 $dsn = "sqlsrv:server = tcp:asus19.database.windows.net,1433; Database = dengi";
@@ -55,7 +58,7 @@ $email = $_POST['email'];
 $date = date("Y-m-d");
 $country = $_POST['country'];
 if ($name == "" || $email == "" || $country == "") {
-echo "<h3>Не заполнен номер карты получателя.</h3>";
+echo "<h3>Не заполнены поля Номер карты и ФИО и тел.номер.</h3>";
 }
 else {
 $sql_insert ="INSERT INTO registration_on (name, email, date, country) VALUES (?,?,?,?)";
@@ -65,7 +68,7 @@ $stmt->bindValue(2, $email);
 $stmt->bindValue(3, $date);
 $stmt->bindValue(4, $country);
 $stmt->execute();
-echo "<h3>Нажмите далее!</h3>";
+echo "<h3>Вы успешно заполнили данные!</h3>";
 }
 }
 catch(Exception $e) {
