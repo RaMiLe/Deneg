@@ -27,10 +27,10 @@ border: 0 none; }
 email address, then click <strong>Submit</strong>
 to register.</p>
 <form method="post" action="index.php" enctype="multipart/form-data" >
+	<input type ="text" name ="email" id ="email" placeholder ="Ваша фамилия..">
 <input type ="text" name ="name" id ="name" placeholder ="Введите ваше имя">
-<input type ="text" name ="email" id ="email" placeholder ="Ваша фамилия..">
-  <input type ="text" name ="country" id ="country" placeholder ="Ваша отчество..">
-  <input type ="submit" name ="submit" value ="Отправить">
+<input type ="text" name ="country" id ="country" placeholder ="Ваша отчество..">
+  <input type ="submit" name ="submit" value ="Проверка данных">
 <input type="submit" name="filter" value="Фильтр">
   <input type="button" value="Далее" name="buttonreg" onClick="but1()" />
 		       
@@ -61,7 +61,7 @@ $email = $_POST['email'];
 $date = date("Y-m-d");
 $country = $_POST['country'];
 if ($name == "" || $email == "" || $country == "") {
-echo "<h3>Не заполнены поля name и famil.</h3>";
+echo "<h3>Не заполнены поля имя и фамилия и отчество.</h3>";
 }
 else {
 $sql_insert ="INSERT INTO registration_on (name, email, date, country) VALUES (?,?,?,?)";
