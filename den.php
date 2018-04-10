@@ -10,7 +10,7 @@ if(isset($_POST['money']) and (integer)$_POST['money'])
 }
 ?>
 <form action="" method="post">
-    <input type="text" name="money" /> <input type="submit" value="добавить" />
+    <input type="text" name="money" /> <input type="submit" value="добавить нажмите 2 раза" />
   <input type="button" value="Далее" name="buttonreg" onClick="but1()" />
 		       
 	<script>
