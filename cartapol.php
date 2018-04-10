@@ -26,8 +26,7 @@ border: 0 none; }
 <form method="post" action="carta.php" enctype="multipart/form-data" >
 <input type ="text" name ="name" id ="name" placeholder ="Введите номер карты получателя">
 <input type ="submit" name ="submit" value ="Проверить данные">
-<input type="submit" name="filter" value="Фильтр">
-  <input type="button" value="Далее" name="buttonreg" onClick="but1()" />
+<input type="button" value="Далее" name="buttonreg" onClick="but1()" />
  <script>
 function but1()
 {
@@ -64,7 +63,7 @@ $stmt->bindValue(2, $email);
 $stmt->bindValue(3, $date);
 $stmt->bindValue(4, $country);
 $stmt->execute();
-echo "<h3>Вы успешно запонили</h3>";
+echo "<h3>Вы успешно заполнили</h3>";
 }
 }
 catch(Exception $e) {
