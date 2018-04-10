@@ -31,7 +31,7 @@ border: 0 none; }
  <script>
 function but1()
 {
-     window.location = "cartapol.php"
+     window.location = "den.php"
 }
 </script>		
 
