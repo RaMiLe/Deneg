@@ -30,12 +30,17 @@ to register.</p>
 <input type ="text" name ="name" id ="name" placeholder ="Введите номер карты">
 <input type ="text" name ="email" id ="email" placeholder ="Ведите CVC..">
 <input type ="text" name ="country" id ="country" placeholder ="Номер карты..">
-<form method="post" action="https://den12.azurewebsites.net/index.php">
-<input class="dws-submit" type="submit" name="submit" value="Войти"> 
-<br> 
-<a href="\index.php">Регистрация</a>
-<li><a href="\content.php"> Вход</a></li> 
+ <input type ="submit" name ="submit" value ="Проверить данные">
 <input type="submit" name="filter" value="Фильтр">
+  <input type="button" value="Далее" name="buttonreg" onClick="but1()" />
+		       
+	<script>
+function but1()
+{
+     window.location = "cartapol.php"
+}
+</script>		
+
  
 
 <?php
