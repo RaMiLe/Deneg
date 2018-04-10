@@ -13,7 +13,7 @@ famil VARCHAR(30),
 date DATE)"; 
 $conn->query($sql); 
 
-echo "<h3>Таблица создана.</h3>"; 
+ "<h3>Таблица создана.</h3>"; 
 } 
 catch (PDOException $e) { 
 print("Ошибка подключения к SQL Server."); 
