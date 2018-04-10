@@ -23,19 +23,17 @@ border: 0 none; }
 </head>
 <body>
 <h1>Перевод денежных средств</h1>
-<p>Fill in your name and
-email address, then click <strong>Submit</strong>
-to register.</p>
 <form method="post" action="carta.php" enctype="multipart/form-data" >
 <input type ="text" name ="name" id ="name" placeholder ="Введите номер карты получателя">
-<input type ="text" name ="email" id ="email" placeholder ="ФИО получателя..">
-<form method="post" action="https://den12.azurewebsites.net/index.php">
-<input class="dws-submit" type="submit" name="submit" value="Войти"> 
-<br> 
-<a href="\index.php">Регистрация</a>
-<li><a href="\content.php"> Вход</a></li> 
+<input type ="submit" name ="submit" value ="Проверить данные">
 <input type="submit" name="filter" value="Фильтр">
- 
+  <input type="button" value="Далее" name="buttonreg" onClick="but1()" />
+ <script>
+function but1()
+{
+     window.location = "cartapol.php"
+}
+</script>		
 
 <?php
 $dsn = "sqlsrv:server = tcp:asus19.database.windows.net,1433; Database = dengi";
@@ -56,7 +54,7 @@ $email = $_POST['email'];
 $date = date("Y-m-d");
 $country = $_POST['country'];
 if ($name == "" || $email == "" || $country == "") {
-echo "<h3>Не заполнены поля name и famil.</h3>";
+echo "<h3>Не заполнен номер карты получателя.</h3>";
 }
 else {
 $sql_insert ="INSERT INTO registration_on (name, email, date, country) VALUES (?,?,?,?)";
@@ -66,7 +64,7 @@ $stmt->bindValue(2, $email);
 $stmt->bindValue(3, $date);
 $stmt->bindValue(4, $country);
 $stmt->execute();
-echo "<h3>Вы зарегистрировались!</h3>";
+echo "<h3>Вы успешно запонили</h3>";
 }
 }
 catch(Exception $e) {
